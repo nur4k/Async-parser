@@ -1,15 +1,11 @@
-# import json
-# import httpx
-# import asyncio
-
-# from ads.models import Car, Apartment
+import httpx
 
 
-# async def fetch_data(url, headers):
-#     async with httpx.AsyncClient() as client:
-#         response = await client.get(url, headers=headers)
-#         response.raise_for_status()
-#         return response.json()
+async def fetch_data(url, headers):
+    async with httpx.AsyncClient() as client:
+        response = await client.get(url, headers=headers)
+        response.raise_for_status()
+        return response.json()
 
 
 # async def process_rent_kv():

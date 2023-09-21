@@ -11,9 +11,8 @@ class Car(models.Model):
     mobile = models.CharField('Телефон', max_length=15)
     user_id = models.CharField('Юзэр', max_length=155)
 
-    def __str__(self) -> str:
+    def __str__(self):
         return self.user_id
-
 
 class Apartment(models.Model):
     id_apartment = models.CharField('id', max_length=155)
